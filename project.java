@@ -11,6 +11,8 @@ public class project
   
     }
     public static int checkMatchCount(){
+        int count = 0;
+        while(count<15){
         StringBuffer sb = new StringBuffer();
         StringBuffer sb1 = new StringBuffer();
 
@@ -32,18 +34,23 @@ public class project
             }
 
             
-
+            sc.close();
+            sc1.close();
         } catch (Exception e) {
             e.printStackTrace();
         }
+        
         ////Converts the Words in the string buffer to a string array using split function
         String []a= sb.toString().split(" ");
         String []b= sb1.toString().split(" ");
 
 
         // Instantiate two strings to store the randomly generated sentences
-        String firstSentence= a[random()]+" is in "+ b[random()] +".";
-        String secondSentence= a[random()]+" is in "+ b[random()] +".";
+        String firstSentence = "";
+        String secondSentence = "";
+        while(firstSentence == secondSentence){
+        firstSentence= a[random1()]+" is in "+ b[random()] +".";
+        secondSentence= a[random1()]+" is in "+ b[random()] +".";}
 
         ///Prints out the sentences
         System.out.println(firstSentence+" \n"+secondSentence);
@@ -59,14 +66,14 @@ public class project
         char []hash1=firstHash.toCharArray();
         char []hash2=secondHash.toCharArray();
 
-        int count=0;
+        count=0;
         for(int i=0;i<hash1.length;i++){
            if(hash1[i]==hash2[i]){
                count++;
            }
 
         }
-
+    }
         //returns the count
         return count;
         }
@@ -75,6 +82,13 @@ public class project
         {
             Random random = new Random();
             int value = random.nextInt(190 + 1) + 1;
+            return value;
+        }
+
+        public static int random1()
+        {
+            Random random = new Random();
+            int value = random.nextInt(4900 + 1) + 1;
             return value;
         }
 
@@ -96,16 +110,4 @@ public class project
         }
     }
 
-    public static int check(String input, String input2)
-    {
-        int count = 0;
-        for(int i=0; i < input.length(); i++)
-        {
-            if(input.charAt(i) == input2.charAt(i))
-            {
-                count++;
-            }
-        }
-        return count;
-    }
 }
