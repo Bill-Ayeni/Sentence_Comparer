@@ -5,4 +5,3 @@ based on their SHA-256 hash values. The program reads names and countries from e
 calculates the number of matching characters at corresponding positions to determine similarity. This project deepened my understanding
 of cryptographic hashing and sharpened my problem-solving abilities, especially in file handling, string manipulation, and the practical
 application of hashing algorithms.
-![image](https://github.com/user-attachments/assets/10c5872b-5393-43a4-811a-732d53227e31)
